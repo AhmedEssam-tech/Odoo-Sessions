@@ -1,6 +1,6 @@
 <odoo>
 
     <menuitem id="menu_root" name="subscription" sequence="10"/>
-    <menuitem id="model_menu_sub" name="models" parent="menu_root"  sequence="10" />
+    <menuitem id="subscription_menu_sub" name="subscriptions" parent="menu_root"  sequence="10" />
 
 </odoo>
