@@ -15,12 +15,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail'],
+    'depends': ['base','mail','sale_management','stock'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/base_menu.xml',
+        'views/subscription_activity_plan.xml',
+        'views/subscription_close_reason.xml',
+        'views/subscription_activity_type.xml',
+        'views/subscription_activity_plan.xml',
+
     ],
     'assets' :{
     },
