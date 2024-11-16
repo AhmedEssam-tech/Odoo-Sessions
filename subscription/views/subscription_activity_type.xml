@@ -1,3 +1,74 @@
 <odoo>
+    <record id="Activity_action" model="ir.actions.act_window">
+        <field name="name">Activity Typs</field>
+        <field name="res_model">activity.type</field>
+		<field name="view_mode">tree,form</field>
+    </record>
 
+	<record id="Activity_View" model="ir.ui.view">
+        <field name="name">Activity View</field>
+        <field name="model">activity.type</field>
+		<field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="summary"/>
+                <field name="category"/>
+                <field name="delay_count"/>
+                <field name="res_model"/>
+                <field name="icon"/>
+                <!-- <field name="tag_ids"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="Activity_form" model="ir.ui.view">
+        <field name="name">Activity form</field>
+        <field name="model">activity.type</field>
+		<field name="arch" type="xml">
+            <form>
+                <sheet>
+					<div class="oe_title">
+						<label for="name" />
+						<h1>
+                            <field name="name" default="Schedule A Meeting" />
+						</h1>
+					</div>
+                    <group>
+                        <group string="Activity Settings">
+                            <field name="category"/>
+                            <field name="dashboard_visibility"/>
+                            <field name="default_user_id"/>
+                            <field name="res_model"/>
+                            <field name="summary"/>
+                            <field name="icon"/>
+                            <field name="decorating_type"/>
+                            <field name="keep_done"/>
+                            <field name="default_note"/>
+                        </group>
+                         <group string="Next Activity">
+                            <field name="changing_type"  invisible="category == 'upload_file'"/>
+                            <field name="suggest_next_type_ids"/>
+                            <field name="email_template_ids"/>
+                            <field name="delay_count"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids"/>
+                    <field name="message_ids" />
+            </div> -->
+            </form>
+        </field>
+    </record>
+	<record id="Activity_Search" model="ir.ui.view">
+        <field name="name">Activity Search</field>
+        <field name="model">activity.type</field>
+		<field name="arch" type="xml">
+			<search string="Activity Serach">
+				<field name="name"/>
+				</search>
+        </field>
+    </record>
+    <menuitem id="Activity_Typs_view" name="Activity Typs" parent="configuration_menu_sub" action="Activity_action" />
 </odoo>
