@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mail.activity.plan,mail.activity.plan,model_activity_plan,,1,1,1,1
+mail.activity_plan_template,activity_plan_template,model_activity_plan_template,,1,1,1,1
 
