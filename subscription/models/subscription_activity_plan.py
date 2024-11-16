@@ -1,10 +1,5 @@
-from email.policy import default
 
 from odoo import api, fields, models
-from pkg_resources import require
-
-from server.odoo.fields import Many2one
-
 
 class ActivityPlan(models.Model):
     _name="activity_plan"
