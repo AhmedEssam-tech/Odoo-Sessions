@@ -24,7 +24,7 @@
         'views/subscription_activity_plan.xml',
         'views/subscription_close_reason.xml',
         'views/subscription_activity_type.xml',
-        'views/subscription_activity_plan.xml',
+        'views/subscription_plan.xml',
 
     ],
     'assets' :{
