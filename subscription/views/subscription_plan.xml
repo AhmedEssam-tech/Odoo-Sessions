@@ -2,7 +2,7 @@
   <data>
     <record id="view_subscription_plan_form" model="ir.ui.view">
     <field name="name">subscription.plan</field>
-    <field name="model">subscription_plan</field>
+    <field name="model">subscription.plan</field>
     <field name="arch" type="xml">
       <form name="subscription_plan" string="subscription_plan">
         <sheet>
@@ -50,7 +50,7 @@
   </record>
 
 
-    <menuitem name="Plan" id="plan" parent="subscriptions" action="action_subscription_plan"/>
+    <menuitem name="Plan" id="plan" parent="configuration_menu_sub" action="action_subscription_plan"/>
   </data>
 </odoo>
 
