@@ -53,3 +53,5 @@
     <menuitem name="Plan" id="plan" parent="subscriptions" action="action_subscription_plan"/>
   </data>
 </odoo>
+
+
