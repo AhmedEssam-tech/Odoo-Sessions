@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_subscription_plan,subscription_plan,model_subscription_plan,,1,1,1,1
 id_sale_order_close_reason,name_sale_order_close_reason,model_sale_order_close_reason,,1,1,1,1
+
