@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_subscription_plan,subscription_plan,model_subscription_plan,,1,1,1,1
 id_sale_order_close_reason,name_sale_order_close_reason,model_sale_order_close_reason,,1,1,1,1
-
+subscription_model_activity_type,subscription_model_activity_type,model_activity_type,,1,1,1,1
+mail.activity.plan,mail.activity.plan,model_activity_plan,,1,1,1,1
+mail.activity_plan_template,activity_plan_template,model_activity_plan_template,,1,1,1,1
+access_subscription_plan,subscription_plan,model_subscription_plan,,1,1,1,1
