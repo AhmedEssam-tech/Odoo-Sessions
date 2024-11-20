@@ -21,6 +21,25 @@
 
             </group>
           </group>
+
+            <notebook>
+                        <page name="Pricing" string="Pricing">
+                            <field name="subscription_pricing_id">
+                                <tree>
+                                    <field name="product_id"/>
+                                    <field name="recurring_price"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="recurring_price"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+
+
         </sheet>
       </form>
     </field>
