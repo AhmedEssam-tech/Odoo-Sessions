@@ -5,5 +5,5 @@
     <menuitem id="product_menu_sub" name="Products" parent="menu_root"   />
     <menuitem id="reports_menu_sub" name="Reports" parent="menu_root"   />
     <menuitem id="configuration_menu_sub" name="Configuration" parent="menu_root"   />
-
+    <menuitem id="menu_sale_subscription_settings" name="Settings" parent="configuration_menu_sub"  action="sale.action_sale_config_settings" />
 </odoo>
