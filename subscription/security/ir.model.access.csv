@@ -5,3 +5,4 @@ subscription_model_activity_type,subscription_model_activity_type,model_activity
 mail.activity.plan,mail.activity.plan,model_activity_plan,,1,1,1,1
 mail.activity_plan_template,activity_plan_template,model_activity_plan_template,,1,1,1,1
 access_subscription_plan,subscription_plan,model_subscription_plan,,1,1,1,1
+access_subscription_pricing,subscription_pricing,model_subscription_pricing,,1,1,1,1
