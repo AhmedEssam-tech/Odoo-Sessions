@@ -5,3 +5,9 @@ subscription_model_activity_type,subscription_model_activity_type,model_activity
 mail.activity.plan,mail.activity.plan,model_activity_plan,,1,1,1,1
 mail.activity_plan_template,activity_plan_template,model_activity_plan_template,,1,1,1,1
 access_subscription_plan,subscription_plan,model_subscription_plan,,1,1,1,1
+access_subscription_pricing,subscription_pricing,model_subscription_pricing,,1,1,1,1
+product_template,product_template,model_product,,1,1,1,1
+product_supplerinfo,product_supplerinfo,model_product_supplerinfo,,1,1,1,1
+product_recurring,product_recurring,model_product_recurring,,1,1,1,1
+product_pricelist,product_pricelist,model_price,,1,1,1,1
+subscription_price,subscription_price,model_subscription_price,,1,1,1,1

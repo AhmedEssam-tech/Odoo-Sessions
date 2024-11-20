@@ -25,6 +25,8 @@
         'views/subscription_close_reason.xml',
         'views/subscription_activity_type.xml',
         'views/subscription_plan.xml',
+        'views/subscription_product.xml',
+        'views/subscription_price_list.xml'
 
     ],
     'assets' :{
