@@ -1,0 +1,158 @@
+<odoo>
+<!--     <record id="activity_Plans_tree" model="ir.ui.view">-->
+<!--        <field name="name">product_tree</field>-->
+<!--        <field name="model">product</field>-->
+<!--        <field name="mode">primary</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="product_form" model="ir.ui.view">
+        <field name="name">product_form</field>
+        <field name="model">product</field>
+        <field name="arch" type="xml">
+            <form string="Product">
+                <sheet name="product_form">
+                    <div class="oe_title">
+                        <label for="name" string="Product"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field name="priority" widget="priority" class="me-3"/>
+                                <field class="text-break" name="name" options="{'line_breaks': False}" widget="text" placeholder="e.g. Cheese Burger"/>
+                            </div>
+                        </h1>
+                    </div>
+                    <div name="options">
+                        <span class="d-inline-block">
+                            <field name="sale_ok"/>
+                            <label for="sale_ok"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <field name="purchase_ok"/>
+                            <label for="purchase_ok"/>
+                        </span>
+                        <span class="d-inline-block">
+                            <field name="subscriptions_ok"/>
+                            <label for="subscriptions_ok"/>
+                        </span>
+                    </div>
+                    <notebook>
+                        <page string="General Information" name="general_information">
+                            <group>
+                                <group>
+                                    <field name="product_type" widget="radio"/>
+                                    <field name="create_on_order"/>
+                                    <field name="invoicing_policy"/>
+                                    <field name="product_tooltip" placeholder="Invoice ordered quantities as soon as this service is sold.Create projects or tasks later, and link them to order to track the time spent."/>
+                                    <field name="plan_service"/>
+                                </group>
+                                <group>
+                                    <field name="sales_price" class="oe_inline" widget='monetary'
+                                        options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+                                    <field name="sales_Taxes" widget="many2many_tags"/>
+                                    <field name="cost" widget='monetary' options="{'currency_field': 'cost_currency_id', 'field_digits': True}"/>
+                                    <field name="purchase_taxes" widget="many2many_tags"/>
+                                    <field name="category"/>
+                                    <field name="reference"/>
+                                    <field name="company_id"/>
+                                </group>
+                            </group>
+                            <group string="Internal Notes">
+                                <field name="internal"/>
+                            </group>
+                        </page>
+                        <page string="Sales" name="sales">
+                            <group>
+                                <group string="Upsell And Cross-Sell">
+                                    <field name="optional_products_ids"
+                                           placeholder="Recommend when 'Adding to Cart' or quotation"/>
+                                </group>
+                                <group string="Extra Info">
+                                    <field name="optional_tags_ids"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Quotation Description">
+                                    <field name="description_sales"
+                                           nolabel="1"
+                                           placeholder="This note is added to sales orders and invoices."/>
+                                </group>
+                                <group string="Expense">
+                                    <field name="re_invoice_costs" widget="radio"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Recurring Prices" name="recurring_Prices">
+                            <field name="pricelist_ids">
+                                <tree editable="bottom">
+                                    <field name="recurring_plan"/>
+                                    <field name="pricelist_id"/>
+                                    <field name="price"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Purchase" name="purchase">
+                            <field name="info_ids">
+                                <tree editable="bottom">
+                                    <field name="vendor" />
+                                    <field name="product_name" optional="1"/>
+                                    <field name="product_code" optional="1"/>
+                                    <field name="start_date" optional="1"/>
+                                    <field name="end_date" optional="1"/>
+                                    <field name="company_id" optional="1"/>
+                                    <field name="quantity" optional="1"/>
+                                    <field name="price" />
+                                    <field name="currency" />
+                                    <field name="delivery" optional="1"/>
+                                </tree>
+                            </field>
+                            <group>
+                                <group string="Reordering">
+                                    <field name="subcontract_service"/>
+                                </group>
+                                <group string="Vendor Bills">
+                                    <field name="control_policy" widget="radio"/>
+                                </group>
+                            </group>
+                            <group string="Purchase Description">
+                                <div>
+                                    <field name="description_purchase" nolabel="1"  placeholder="This note is added to purchase orders"/>
+                                </div>
+                            </group>
+                        </page>
+                        <page string="Accounting" name="accounting">
+                            <group>
+                                <group string="Receivables">
+                                    <field name="income_account"/>
+                                </group>
+                                <group string="Payables">
+                                    <field name="expense_account"/>
+                                    <field name="price_difference_account"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_action" model="ir.actions.act_window">
+        <field name="name">product</field>
+        <field name="res_model">product</field>
+
+    </record>
+
+    <menuitem
+         id="product_menu"
+         name="products"
+         parent="product_menu_sub"
+         action="product_action"
+    />
+
+</odoo>
