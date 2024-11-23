@@ -4,3 +4,4 @@ from . import subscription_activity_plan
 from . import plans
 from . import subscription_product_plan
 from . import subscription_price_list
+from . import sale_oder_inherit

@@ -20,6 +20,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'security/subscription_security.xml',
         'views/base_menu.xml',
         'views/subscription_activity_plan.xml',
         'views/subscription_close_reason.xml',
